@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(254, 254, 254);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  /* pushes text left, right-block right */
+  padding: 20px 30px;
+  background: linear-gradient(to right,
+      rgb(42, 42, 82),
+      rgb(74, 74, 120));
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  /* align to the top of .header-right */
+  right: 0;
+  /* align to the right edge */
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  /* optional padding so links aren’t flush to the edge */
+  z-index: 1;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.0rem;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  color: rgb(157, 162, 111);
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 50%;
+}
+
+.headline {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.des {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 10px;
+  position: absolute;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.btn {
+
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(179, 58, 48);
+  margin-top: 50px;
+  position: absolute;
+  left: 30px;
+}
+
+.btn:hover {
+  background-color: rgb(212, 78, 109);
+}
+
+.aboutme {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+  /* For smaller screens */
+}
+
+.text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: rgb(42, 42, 82);
+  margin-top: 20px;
+}
+
+.more {
+  display: block;
+  margin-top: 20px;
+  background-color: transparent;
+  color: rgb(179, 58, 48);
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.more:hover {
+  color: rgb(42, 42, 82);
+}
+
+.toggle-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  font-size: 1rem;
+  font-style: italic;
+  color: rgb(42, 42, 82);
+}
+
+.toggle-checkbox:checked ~ .toggle-content {
+  max-height: 700px; /* adjust based on actual content height */
+}
+
+.more-text::after {
+  content: 'More';
+}
+
+.toggle-checkbox:checked + .more-text::after {
+  content: 'Less';
+}
+
+.more {
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(179,58,48);
+  user-select: none;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-checkbox:checked + .more-text + .arrow {
+  transform: rotate(180deg); /* Flip arrow when expanded */
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.video-content {
+  flex-shrink: 0;
+}
+
+.video {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+  /* For smaller screens */
+}
+
+.team {
+  width: 50%;
+  border-radius: 170px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 120px;
+}
+
+
+.names {
+  color: rgb(42, 42, 82);
+  margin-top: 20px;
+
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.txt {
+  position: absolute;
+  left: 55%;
+}
+
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.form-group span {
+  width: 80px; /* or auto if content-driven */
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.form-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #100f0fc4;
+  width: 400px;
+}
+
+
+
+.btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.fb {
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.map {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+
+footer {
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 950px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+.footer svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+/* Ensure clickable area covers entire icon */
+.footer a::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+}
+
+/* Reset any potential pointer-events issues */
+footer * {
+  pointer-events: auto;
+}
+
+.page2-head {
+  background-color: rgb(28, 42, 82);
+  color: #fff;
+  height: 200px;
+}
+
+.page2-head h1 {
+  font-size: 4.5rem;
+  position: absolute;
+  left: 130px;
+  top: 30px;
+}
+
+.page2-head p {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 130px;
+  top: 120px;
+}
+
+.p2-main {
+  display: flex;
+  gap: 90px;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 120px;
+  flex-wrap: wrap;
+
+}
+
+.re-pro {
+  display: flex;
+  align-items: flex-start;
+  /* align items to the top */
+  margin-top: 40px;
+  margin-left: 40px;
+  gap: 40px;
+}
+
+.re-pro-img img {
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.re-pro-text {
+  max-width: 700px;
+  margin-top: 40px;
+  margin-left: 90px;
+}
+
+.box {
+  background-color: blue;
+}
+
+.box {
+  background-color: blue;
+}
+
+.p3-abt {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 20px;
+  padding: 40px;
+  line-height: 1.5;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: red;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
